@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Place Order - E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .order-section {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f59595;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.order-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-form label {
+  font-weight: bold;
+  color: #222;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ecdada;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.order-form textarea {
+  resize: vertical;
+}
+
+.order-form button {
+  background-color: #007b5e;
+  color: #fad5d5;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+  background-color: #005f46;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Place Your Order</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Order</a>
+    </nav>
+  </header>
+
+  <section class="order-section">
+    <h2>Order Form</h2>
+    <form action="#" method="post" class="order-form">
+
+      <label for="product">Select Product:</label>
+      <select name="product" id="product" required>
+        <option value="">-- Choose a product --</option>
+        <option value="Casual Shoes">Casual Shoes</option>
+        <option value="Leather Wallet">Leather Wallet</option>
+        <option value="Backpack">Backpack</option>
+        <option value="Smart Watch">Smart Watch</option>
+        <option value="Wireless Earbuds">Wireless Earbuds</option>
+        <option value="Denim Jacket">Denim Jacket</option>
+        <option value="Sunglasses">Sunglasses</option>
+        <option value="Bluetooth Speaker">Bluetooth Speaker</option>
+        <option value="Hoodie">Hoodie</option>
+        <option value="Running Shoes">Running Shoes</option>
+        <option value="Graphic T-Shirt">Graphic T-Shirt</option>
+        <option value="Laptop Bag">Laptop Bag</option>
+        <option value="Wrist Watch">Wrist Watch</option>
+        <option value="Formal Shoes">Formal Shoes</option>
+        <option value="Smartphone Cover">Smartphone Cover</option>
+        <option value="Wireless Mouse">Wireless Mouse</option>
+        <option value="Bluetooth Headphones">Bluetooth Headphones</option>
+        <option value="Cap">Cap</option>
+        <option value="Track Pants">Track Pants</option>
+        <option value="LED Desk Lamp">LED Desk Lamp</option>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+
+      <label for="address">Delivery Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <label for="payment">Payment Method:</label>
+      <select name="payment" id="payment" required>
+        <option value="">-- Select Payment Mode --</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="UPI / PhonePe / Google Pay">UPI / PhonePe / Google Pay</option>
+        <option value="Credit / Debit Card">Credit / Debit Card</option>
+      </select>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My E-Commerce Store</p>
+  </footer>
+</body>
+</html>
